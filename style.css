@@ -1,0 +1,45 @@
+/* Bucket Bloom website – game colours, glossy 3D buttons */
+:root{--bg:#1d1640;--card:#2b2250;--card2:#352a63;--line:#4a3d86;--txt:#f4efff;--mut:#b9b0de;--gold:#ffc928;--orange:#ff9f1a;--teal:#22b8cf;--purple:#9b5cff}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,#3b2d7a 0,var(--bg) 60%) fixed,var(--bg);color:var(--txt);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--gold)}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+h1,h2,h3,.brand{font-family:Fredoka,system-ui,sans-serif;font-weight:700;line-height:1.2}
+header.top{display:flex;align-items:center;gap:12px;padding:14px 0}
+header.top img{width:44px;height:44px;border-radius:12px;box-shadow:0 3px 0 rgba(0,0,0,.35)}
+header.top .brand{font-size:22px;text-decoration:none;color:var(--txt)}
+header.top nav{margin-left:auto;display:flex;gap:16px;font-size:15px}
+header.top nav a{color:var(--mut);text-decoration:none}
+header.top nav a:hover{color:var(--txt)}
+.hero{text-align:center;padding:12px 0 8px}
+.hero .banner{width:100%;border-radius:22px;border:3px solid #fff;box-shadow:0 10px 0 rgba(0,0,0,.25),0 18px 40px rgba(0,0,0,.35);display:block}
+.hero h1{font-size:clamp(30px,6vw,46px);margin:26px 0 6px;text-shadow:0 3px 0 rgba(40,10,60,.6)}
+.hero p{color:var(--mut);font-size:18px;max-width:620px;margin:0 auto 22px}
+/* glossy 3D button: darker edge underneath, gradient face, white rim, shine */
+.btn3d{position:relative;display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:999px;border:3px solid #fff;
+  background:linear-gradient(#ffe066,var(--orange));color:#5a2a00;font:700 20px Fredoka,system-ui,sans-serif;text-decoration:none;
+  box-shadow:0 6px 0 #a85a00,0 12px 18px rgba(0,0,0,.35);transition:transform .08s,box-shadow .08s}
+.btn3d::before{content:"";position:absolute;left:16px;right:16px;top:4px;height:38%;border-radius:999px;background:rgba(255,255,255,.45)}
+.btn3d:active{transform:translateY(4px);box-shadow:0 2px 0 #a85a00,0 6px 10px rgba(0,0,0,.35)}
+.btn3d .tri{width:0;height:0;border-left:14px solid #5a2a00;border-top:9px solid transparent;border-bottom:9px solid transparent;position:relative}
+.btn3d span{position:relative}
+.note{color:var(--mut);font-size:14px;margin-top:14px}
+section{padding:34px 0}
+h2{font-size:28px;text-align:center;margin:0 0 20px}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.feat{background:linear-gradient(var(--card2),var(--card));border:2px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 6px 0 rgba(0,0,0,.25)}
+.feat h3{margin:0 0 6px;font-size:19px;color:var(--gold)}
+.feat p{margin:0;color:var(--mut);font-size:15px}
+.shots{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x mandatory}
+.shots img{flex:0 0 auto;width:200px;border-radius:18px;border:3px solid #fff;box-shadow:0 6px 0 rgba(0,0,0,.3);scroll-snap-align:start}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:22px 0 40px;color:var(--mut);font-size:14px;text-align:center}
+footer a{color:var(--mut)}
+/* privacy page */
+.doc{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:24px clamp(16px,4vw,40px);margin:10px 0 0}
+.doc h1{font-size:32px;margin:4px 0}
+.doc h2{text-align:left;font-size:21px;margin:28px 0 8px;color:var(--gold)}
+.doc p,.doc li{color:#e6e0fa}
+.doc ul{padding-left:22px}
+.doc .upd{color:var(--mut);margin:0 0 10px}
+@media (max-width:520px){header.top nav{gap:12px;font-size:14px}.shots img{width:160px}.btn3d{font-size:18px;padding:13px 24px}}
